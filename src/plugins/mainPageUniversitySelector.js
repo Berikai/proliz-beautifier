@@ -13,15 +13,19 @@ export default (_app) => ({
             const dom = new JSDOM(content);      
             const document = dom.window.document;  
 
-            if(req.headers.cookie) {
-                const cookies = Object.fromEntries(req.headers.cookie.split('; ').map(cookie => cookie.split('=')))
-                if (cookies['University'] == '' || cookies['University'] == undefined) {
+            try {
+                if(req.headers.cookie) {
+                    const cookies = Object.fromEntries(req.headers.cookie.split('; ').map(cookie => cookie.split('=')))
+                    if (cookies['University'] == '' || cookies['University'] == undefined) {
+                        document.querySelector('#imgUniLogo').remove()
+                        document.querySelector('#lblUniAd').textContent = 'Proliz Beautifier'
+                    }
+                } else {
                     document.querySelector('#imgUniLogo').remove()
                     document.querySelector('#lblUniAd').textContent = 'Proliz Beautifier'
                 }
-            } else {
-                document.querySelector('#imgUniLogo').remove()
-                document.querySelector('#lblUniAd').textContent = 'Proliz Beautifier'
+            } catch (error) {
+                console.error('Error while modifying the initial page:', error)
             }
             
             const universitySelector = document.createElement('div')
