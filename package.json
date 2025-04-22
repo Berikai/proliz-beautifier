@@ -1,0 +1,19 @@
+{
+  "name": "proliz-beautifier",
+  "version": "1.0.0",
+  "description": "The user interface beautifier for Proliz",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Berikai",
+  "license": "MIT",
+  "dependencies": {
+    "@skhaz/zstd": "^1.0.21",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
+    "jsdom": "^26.1.0"
+  }
+}
