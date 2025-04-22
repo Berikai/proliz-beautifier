@@ -10,10 +10,12 @@
   "author": "Berikai",
   "license": "MIT",
   "dependencies": {
-    "@skhaz/zstd": "^1.0.21",
+    "@mongodb-js/zstd": "^2.0.1",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "http-proxy-middleware": "^3.0.5",
-    "jsdom": "^26.1.0"
+    "install": "^0.13.0",
+    "jsdom": "^26.1.0",
+    "npm": "^11.3.0"
   }
 }

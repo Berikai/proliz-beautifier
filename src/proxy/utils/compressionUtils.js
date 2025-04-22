@@ -1,12 +1,12 @@
 import zlib from 'zlib'
-import zstd from '@skhaz/zstd'
+import zstd from '@mongodb-js/zstd'
 
 export default class {
     constructor() {
         this.compression = 'gzip'
     }
 
-    decompress(buffer) {
+    async decompress(buffer) {
         try {
             this.result = zlib.gunzipSync(buffer)
             return this.result.toString()
@@ -18,7 +18,7 @@ export default class {
             } catch (err) {
                 try {
                     this.compression = 'zstd'
-                    this.result = zstd.decompressSync(buffer)
+                    this.result = await zstd.decompress(buffer)
                     return this.result.toString()
                 } catch (err) {
                     this.compression = 'text'
@@ -28,7 +28,7 @@ export default class {
         }
     }
 
-    compress(data) {
+    async compress(data) {
         try {
             if(this.compression === 'gzip') {
                 this.compressed = zlib.gzipSync(data)
@@ -37,7 +37,7 @@ export default class {
                 this.compressed = zlib.brotliCompressSync(data)
                 return this.compressed
              } else if (this.compression = 'zstd') {
-                this.compressed = zstd.compressSync(data)
+                this.compressed = await zstd.compress(data)
                 return this.compressed
              } else {
                 return data.toString()

@@ -10,7 +10,7 @@ export default (proxyRes, req, res, options) => {
         body.chunks.push(chunk)
     })
 
-    proxyRes.on('end', () => {
+    proxyRes.on('end', async () => {
         // Create a new instance of CompressionUtils
         const C = new CompressionUtils()
 
@@ -21,7 +21,7 @@ export default (proxyRes, req, res, options) => {
         const isCompressed = proxyRes.headers['content-encoding'] !== undefined
 
         // Decompress the response if it is compressed
-        let decompressed = isCompressed ? C.decompress(body.data) : body.data
+        let decompressed = isCompressed ? await C.decompress(body.data) : body.data
 
         // Zstd decompression works, but compression back doesn't somehow
         // This is a workaround to set the content-encoding to identity
@@ -48,7 +48,7 @@ export default (proxyRes, req, res, options) => {
         }
     
         // Compress the response if it was compressed originally
-        const compressed = isCompressed && res.getHeader('content-encoding') !== 'identity' ? C.compress(decompressed) : decompressed
+        const compressed = isCompressed && res.getHeader('content-encoding') !== 'identity' ? await C.compress(decompressed) : decompressed
 
         // Send the response
         res.end(compressed)
