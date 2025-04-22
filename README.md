@@ -18,6 +18,14 @@ Proliz Beautifier is a user interface enhancement for Proliz, a popular student 
 
 </details>
 
+<details>
+
+<summary>📷 Ekran görüntüsü</summary>
+
+![ui](assets/image.png)
+
+</details>
+
 ## ⚙️ Yaklaşım
 
 Proliz platformunun görünümüne etki eden ana CSS sınıfları ağırlıklı olarak `App_Themes/oibs18/oibs18.css` dizininde bulunan dosya tarafından sağlanıyor. Bu CSS dosyasının sonuna mevcut sınıfları "overwrite" edecek şekilde sınıfları yeniden tanımlayarak düzenlemeler yapmak, görsel manipülasyonumuzu yapmak için yeterli oluyor.
