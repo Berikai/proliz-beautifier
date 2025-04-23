@@ -68,20 +68,20 @@ Bu bağlamda geriye website içeriğini manipüle etmek kaldı. Bunun için iki 
 - [ ] Aşağıda listelenen sistemlere proxy ile bağlanırken yaşanan problemler düzeltilecek. O zamana kadar üniversite seçim ekranından çıkarıldılar.
 
     - [ ] obs.yildiz.edu.tr: `Proxy Error: Error: write EPROTO 804CF70502000000:error:0A000152:SSL routines:final_renegotiate:unsafe legacy renegotiation disabled:ssl/statem/extensions.c:948`
-        - Sebep: İlgili sunucu 'RFC5746 secure renegotiation' desteklemiyor.
+        - Sebep: Sunucu 'RFC5746 secure renegotiation' desteklemiyor.
 
     - [ ] obs.beu.edu.tr: `Proxy Error: Error: unable to verify the first certificate`
-        - Sebep: İlgili sunucu istemciye tüm SSL sertifika zincirini sağlamıyor.
+        - Sebep: Sunucu istemciye tüm SSL sertifika zincirini sağlamıyor.
     
     - [ ] obs.firat.edu.tr: `Proxy Error: Error: unable to verify the first certificate`
-        - Sebep: İlgili sunucu istemciye tüm SSL sertifika zincirini sağlamıyor.
+        - Sebep: Sunucu istemciye tüm SSL sertifika zincirini sağlamıyor.
 
     - [ ] obs.yasar.edu.tr: `Cloudflare: Web sitesine bu adresten erişilemiyor.`
-        - Sebep: İlgili sunucunu kullandığı ters vekil sunucu, Cloudflare, erişime izin vermiyor.
+        - Sebep: Sunucunu kullandığı ters vekil sunucu, Cloudflare, erişime izin vermiyor.
 
 ## 🤝 Katkı
 
-Projeye katkıları memnuniyetle karşılıyorum! İlgili katkılarınız için pull request gönderebilirsiniz 🤗
+Projeye katkıları memnuniyetle karşılıyorum! Katkılarınız için pull request gönderebilirsiniz 🤗
 
 ## 📜 Lisans
 
