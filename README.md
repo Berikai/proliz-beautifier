@@ -77,7 +77,7 @@ Bu bağlamda geriye website içeriğini manipüle etmek kaldı. Bunun için iki 
         - Sebep: Sunucu istemciye tüm SSL sertifika zincirini sağlamıyor.
 
     - [ ] obs.yasar.edu.tr: `Cloudflare: Web sitesine bu adresten erişilemiyor.`
-        - Sebep: Sunucunu kullandığı ters vekil sunucu, Cloudflare, erişime izin vermiyor.
+        - Sebep: Sunucunun kullandığı ters vekil sunucusu, Cloudflare, erişime izin vermiyor.
 
 ## 🤝 Katkı
 
