@@ -22,7 +22,9 @@ Proliz Beautifier is a user interface enhancement for Proliz, a popular student 
 
 <summary>📷 Ekran görüntüsü</summary>
 
-![ui](assets/image.png)
+![home](assets/home.png)
+
+![ui](assets/ui.png)
 
 </details>
 
