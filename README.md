@@ -4,7 +4,7 @@ Proliz Beautifier (Proliz Güzelleştirici), 🇹🇷 Türkiye'deki üniversitel
 
 Vekil sunucu aracılığıyla kullanmak için [buraya tıkla](https://obs.berikai.dev)!
 
-Kullanıcı betiği indirerek kullanmak için [buraya tıkla](./src/userscript/proliz-beautifier.user.js)!
+Kullanıcı betiği indirerek kullanmak için [buraya tıkla](https://github.com/Berikai/proliz-beautifier/raw/refs/heads/main/src/userscript/proliz-beautifier.user.js)!
  
 <details>
 
@@ -14,7 +14,7 @@ Proliz Beautifier is a user interface enhancement for Proliz, a popular student 
 
 [Click here](https://obs.berikai.dev) to use it through a proxy!
 
-[Click here](./src/userscript/proliz-beautifier.user.js) to use it by downloading the userscript!
+[Click here](https://github.com/Berikai/proliz-beautifier/raw/refs/heads/main/src/userscript/proliz-beautifier.user.js) to use it by downloading the userscript!
 
 </details>
 
