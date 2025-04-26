@@ -82,7 +82,3 @@ Bu bağlamda geriye website içeriğini manipüle etmek kaldı. Bunun için iki 
 ## 🤝 Katkı
 
 Projeye katkıları memnuniyetle karşılıyorum! Katkılarınız için pull request gönderebilirsiniz 🤗
-
-## 📜 Lisans
-
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
