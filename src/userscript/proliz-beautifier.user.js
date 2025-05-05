@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Proliz Beautifier Extension
 // @namespace    https://berikai.dev/
-// @version      2025-04-20
+// @version      2025-05-05
 // @description  Proliz CSS Beautifier Extension
 // @author       Berikai
 // @include      https://obs.*.edu.tr/*
@@ -43,10 +43,11 @@
     // We need to load the CSS file from the Proliz itself and then manipulate it
     for(let link_element of document.getElementsByTagName('link')) {
         const href = link_element.getAttribute('href') ?? ''
-        if(link_element.getAttribute('type') == 'text/css' && href.includes('/oibs18.css')) {
+        const regex = /\/oibs\d+\.css/;
+        if(link_element.getAttribute('type') == 'text/css' && regex.test(href)) {
             GM_xmlhttpRequest({
                 method: 'GET',
-                url: window.location.origin + '/' + href,
+                url: href,
                 onload: (ev) =>
                 {
                     let e = document.createElement('style')
