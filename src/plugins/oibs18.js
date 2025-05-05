@@ -10,17 +10,18 @@ const minifyCSS = (css) => css
 export default (_app) => ({
     type: 'response',
     name: 'Proliz Theme Modifier',
-    description: 'This plugin modifies the response of the oibs18.css file on Proliz to change the look and feel',
+    description: 'This plugin modifies the response of the oibsXX.css file on Proliz to change the look and feel',
     author: 'Berikai',
     enabled: true,
     function: (_proxyRes, req, _res, content, editor) => {
-        if(req.url.includes('/App_Themes/oibs18/oibs18.css')) {
+        const regex = /\/App_Themes\/oibs\d+\/oibs\d+\.css/;
+        if (regex.test(req.url)) {
     
-            const cssFilePath = 'src/css/oibs18.css'
-            const cssContent = fs.readFileSync(cssFilePath, 'utf8')
-            const sumContent = content + minifyCSS(cssContent)
+            const cssFilePath = 'src/css/oibs18.css';
+            const cssContent = fs.readFileSync(cssFilePath, 'utf8');
+            const sumContent = content + minifyCSS(cssContent);
     
-            editor(sumContent)
+            editor(sumContent);
         } 
     }
 })
