@@ -4,7 +4,7 @@ import express from 'express'
 import router from './router.js'
 import createProxy from './proxy/createProxy.js'
 
-import oibs18 from './plugins/oibs18.js'
+import oibs from './plugins/oibs.js'
 import uniLogo from './plugins/uniLogo.js'
 import mainPageButtons from './plugins/mainPageButtons.js'
 import mainPageUniversitySelector from './plugins/mainPageUniversitySelector.js'
@@ -24,7 +24,7 @@ const proxy = createProxy({
     url: process.env.PROXY_PUBLIC_URL,
     router: router,
     plugins: [
-        oibs18(app),
+        oibs(app),
         uniLogo(app),
         mainPageButtons(app),
         mainPageUniversitySelector(app),
