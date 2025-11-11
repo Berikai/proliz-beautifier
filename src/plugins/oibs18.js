@@ -14,10 +14,11 @@ export default (_app) => ({
     author: 'Berikai',
     enabled: true,
     function: (_proxyRes, req, _res, content, editor) => {
+        // Match URLs like /App_Themes/oibs18/oibs18.css or /oibs/App_Themes/oibs20/oibs20.css
         const regex = /\/App_Themes\/oibs\d+\/oibs\d+\.css/;
         if (regex.test(req.url)) {
     
-            const cssFilePath = 'src/css/oibs18.css';
+            const cssFilePath = 'src/css/oibs.css';
             const cssContent = fs.readFileSync(cssFilePath, 'utf8');
             const sumContent = content + minifyCSS(cssContent);
     
